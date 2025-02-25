@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_testing/repository/posts_repository.dart';
 import 'package:flutter_testing/view/posts_view.dart';
 import 'package:flutter_testing/view_model/home_view_model.dart';
+import 'package:flutter_testing/view_model/posts_view_model.dart';
+import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 
 class HomeView extends StatefulWidget {
@@ -26,15 +29,15 @@ class _HomeViewState extends State<HomeView> {
                       ElevatedButton(
                           onPressed: (){
                             vm.incrementCount();
-                          }, child: Text('Increment') ),
+                          }, child: const Text('Increment') ),
                       ElevatedButton(
                           onPressed: (){
                             vm.decrementCount();
-                          }, child: Text('Decrement') ),
+                          }, child: const Text('Decrement') ),
                       ElevatedButton(
                           onPressed: (){
-Navigator.push(context, MaterialPageRoute(builder: (context) => PostsView(),));
-                          }, child: Text('Posts') ),
+Navigator.push(context, MaterialPageRoute(builder: (context) =>  PostsView(futurePosts: PostsRepository(Client()).getPosts(),),));
+                          }, child: const Text('Posts') ),
                     ],
                   ),
                 ),
