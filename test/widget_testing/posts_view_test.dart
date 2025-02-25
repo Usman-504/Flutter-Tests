@@ -31,6 +31,7 @@ futurePosts: mockFetchUsers(),
 
       expect(find.byType(CircularProgressIndicator), findsOneWidget);
       await tester.pumpAndSettle();
+      expect(find.byType(Card), findsNWidgets(posts.length));
       expect(find.byType(ListView), findsOneWidget);
       expect(find.byType(ListTile), findsNWidgets(posts.length));
 
