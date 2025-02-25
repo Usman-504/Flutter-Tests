@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_testing/view/home_view.dart';
+import 'package:flutter_testing/view/login_view.dart';
 import 'package:flutter_testing/view_model/posts_view_model.dart';
 import 'package:provider/provider.dart';
 
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeView(),
+        home: LoginView(),
       ),
     );
 

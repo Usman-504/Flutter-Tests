@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_testing/repository/posts_repository.dart';
 import 'package:flutter_testing/view/posts_view.dart';
 import 'package:flutter_testing/view_model/home_view_model.dart';
-import 'package:flutter_testing/view_model/posts_view_model.dart';
 import 'package:http/http.dart';
 import 'package:provider/provider.dart';
 
